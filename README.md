@@ -21,6 +21,7 @@ This project demonstrates modern AI Accelerated Engineering (AIAE) principles by
 
 ## 🧠 Architecture
 
+```
 OpenAPI Spec
      ↓
 Parser (Context Engineering)
@@ -36,6 +37,7 @@ Parser (Context Engineering)
 Generated TypeScript API
      ↓
 Run locally / deploy to AWS
+```
 
 ---
 
@@ -51,10 +53,13 @@ Run locally / deploy to AWS
 
 ## 🧩 How It Works
 
-1. Provide an OpenAPI specification
+1. Provide an OpenAPI specification  
+
 2. Run:
 
+```bash
 npm run dev
+```
 
 3. The system generates:
    - Models (output/models)
@@ -65,7 +70,29 @@ npm run dev
 
 4. Start the API:
 
+```bash
 npx ts-node output/app.ts
+```
+
+---
+
+## 🔐 Environment Variables
+
+This project requires an OpenAI API key.
+
+Set it as an environment variable:
+
+```bash
+export OPENAI_API_KEY=your_api_key_here
+```
+
+Alternatively, you can use a `.env` file:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+> ⚠️ Do not commit your API key to version control.
 
 ---
 
@@ -73,6 +100,7 @@ npx ts-node output/app.ts
 
 ### Input (OpenAPI)
 
+```json
 {
   "paths": {
     "/users": {
@@ -82,6 +110,7 @@ npx ts-node output/app.ts
     }
   }
 }
+```
 
 ### Output
 
@@ -130,4 +159,4 @@ Zod ensures all incoming requests are validated at runtime:
 ## 🙌 Author
 
 Steven Hamilton  
-Software Engineer  
+Software Engineer
